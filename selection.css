@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background: url("https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_xl_2x/f_auto/primary/eheljjqkg3yslqawuqjj") center/cover no-repeat;
+  filter: blur(8px) brightness(0.4);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+.panel {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 10vh;
+  background: rgba(20, 20, 20, 0.75);
+  border-radius: 14px;
+  padding: 40px 50px 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+.panel h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.sports {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.sport-card {
+  width: 260px;
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.35s ease;
+  border: 1px solid #2a2a2a;
+}
+
+.sport-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.sport-card span {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  font-size: 18px;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+}
+
+.sport-card:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.6);
+  border-color: #00c8ff;
+}
+
+@media (max-width: 900px) {
+  .sports {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sport-card {
+    width: 300px;
+  }
+}

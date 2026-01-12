@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    background-image: url("https://i2-prod.mirror.co.uk/article6924107.ece/ALTERNATES/s1200b/Pep-Guardiola-shows-tactical-moves-on-a-tactics-board-during-his-visit-to-the-Bayern-Munich-supporters-club.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(2, 20, 12, 0.93),
+        rgba(2, 20, 12, 0.93)
+    );
+    z-index: -1;
+}
+
+body {
+    color: #9cff9c;
+}
+
+.formations-section {
+    padding: 30px 40px;
+    backdrop-filter: blur(2px);
+}
+
+h2 {
+    color: #00ff66;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.formations-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.formation-card {
+    width: 260px;
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formation-card:hover summary {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0,255,102,0.6);
+    border-radius: 14px;
+}
+
+summary img {
+    width: 100%;
+    height: 340px;
+    object-fit: contain;
+    background: linear-gradient(#2db564, #17703a);
+    border-radius: 14px;
+    border: 2px solid #baffba;
+    padding: 10px;
+}
+
+.pill {
+    display: inline-block;
+    background: #00ff66;
+    color: #003300;
+    font-weight: bold;
+    padding: 8px 32px;
+    border-radius: 20px;
+    margin: 12px auto 0;
+}
+
+.formation-info {
+    margin-top: 14px;
+    padding: 14px;
+    background: rgba(0,255,102,0.08);
+    border-left: 4px solid #00ff66;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    animation: slideDown 0.35s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+details[open] summary {
+    box-shadow: 0 0 40px rgba(0,255,102,0.8);
+}
