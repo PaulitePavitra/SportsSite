@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide radios */
+input[type="radio"] {
+  display: none;
+}
+
+/* TOP HALF */
+.top {
+  height: 50%;
+  padding: 20px;
+}
+
+.scroll-section h2 {
+  color: #00ff7f;
+  margin-bottom: 10px;
+}
+
+/* SCROLL ROWS */
+.scroll-row {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* CLUB LOGOS BIGGER */
+.scroll-row.clubs img {
+  height: 110px;
+}
+
+/* COUNTRY FLAGS SMALLER */
+.scroll-row.countries img {
+  height: 70px;
+}
+
+.scroll-row img {
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.scroll-row img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00ff7f;
+}
+
+/* BOTTOM HALF */
+.bottom {
+  height: 50%;
+  border-top: 1px solid #00ff7f;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* INFO CARDS */
+.card {
+  display: none;
+  text-align: center;
+  animation: fade 0.4s ease;
+  max-width: 700px;
+}
+
+.team-logo {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.stadium {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.card h1 {
+  color: #00ff7f;
+  margin-bottom: 10px;
+}
+
+/* SHOW BASED ON SELECTION */
+#rm:checked ~ .bottom .rm,
+#barca:checked ~ .bottom .barca,
+#manu:checked ~ .bottom .manu,
+#liverpool:checked ~ .bottom .liverpool,
+#chelsea:checked ~ .bottom .chelsea,
+#mancity:checked ~ .bottom .mancity,
+#bayern:checked ~ .bottom .bayern,
+#acmilan:checked ~ .bottom .acmilan,
+#juventus:checked ~ .bottom .juventus,
+#germany:checked ~ .bottom .germany,
+#france:checked ~ .bottom .france,
+#spain:checked ~ .bottom .spain,
+#italy:checked ~ .bottom .italy,
+#portugal:checked ~ .bottom .portugal,
+#brazil:checked ~ .bottom .brazil,
+#england:checked ~ .bottom .england {
+  display: block;
+}
+
+/* ANIMATION */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-info {
+  margin-top: 40px;
+  text-align: center;
+}
+
