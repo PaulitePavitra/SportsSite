@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  padding: 40px;
+  gap: 80px;
+}
+
+/* Hide radios */
+input[type="radio"] {
+  display: none;
+}
+
+/* LEFT PANEL */
+.positions {
+  width: 320px;
+}
+
+.positions h2 {
+  color: #00ff7f;
+  margin-bottom: 20px;
+}
+
+.positions label {
+  display: block;
+  padding: 14px;
+  margin-bottom: 14px;
+  border: 1px solid #00ff7f;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.positions label:hover {
+  background: #00ff7f;
+  color: #000;
+}
+
+/* RIGHT PANEL */
+.info {
+  flex: 1;
+  position: relative;
+}
+
+/* INFO CARDS */
+.card {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: fade 0.4s ease;
+}
+
+.card img {
+  width: 260px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  color: #00ff7f;
+}
+
+/* SHOW CARD BASED ON RADIO */
+#rw:checked ~ .info .rw,
+#lw:checked ~ .info .lw,
+#no9:checked ~ .info .no9,
+#false9:checked ~ .info .false9 {
+  display: block;
+}
+
+/* ACTIVE BUTTON */
+#rw:checked ~ .positions label[for="rw"],
+#lw:checked ~ .positions label[for="lw"],
+#no9:checked ~ .positions label[for="no9"],
+#false9:checked ~ .positions label[for="false9"] {
+  background: #00ff7f;
+  color: #000;
+}
+
+/* FADE ANIMATION */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
