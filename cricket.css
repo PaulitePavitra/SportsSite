@@ -91,3 +91,46 @@ footer {
     color: #7fffd4;
     font-size: 14px;
 }
+
+.card-section {
+  background: rgba(0, 40, 20, 0.9);
+  border: 1px solid #00ff9c;
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+}
+
+.card-section h3 {
+  color: #00ff9c;
+  margin-bottom: 15px;
+}
+
+.card-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-section li {
+  margin-bottom: 12px;
+}
+
+.card-section a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #00ff9c;
+  padding: 10px;
+  display: block;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.card-section a:hover {
+  background: #00ff9c;
+  color: #000;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
