@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="signup.css">
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
 </head>
 <body>
 
 <div class="side-text">
-    Your journey to greatness
+  Your journey to greatness
 </div>
 
 <div class="center-wrapper">
+  <h2 class="welcome">Welcome!!!</h2>
 
-    <h2 class="welcome">Welcome!!!</h2>
+  <form action="index.html" method="get" class="form">
 
-    <div class="form">
-
-        <div class="row">
-            <input type="text" placeholder="Username" class="input-box">
-            <input type="email" placeholder="Email" class="input-box">
-        </div>
-
-        <div class="row">
-            <input type="password" placeholder="Password" class="input-box">
-            <input type="password" placeholder="Confirm Password" class="input-box">
-        </div>
-
-        <div class="row">
-             <div class="input-box select-box">Select Sport</div>
-            <div class="sports">
-                <label><input type="radio" name="sport"> Cricket</label>
-                <label><input type="radio" name="sport"> Football</label>
-                <label><input type="radio" name="sport"> Kabaddi</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <span class="arrow">→</span>
-            <button class="signup-btn">Sign Up</button>
-        </div>
-
+    <div class="row">
+      <input type="text" placeholder="Username" class="input-box" required>
+      <input type="email" placeholder="Email" class="input-box" required>
     </div>
+
+    <div class="row">
+      <input type="password" placeholder="Password" class="input-box" required>
+      <input type="password" placeholder="Confirm Password" class="input-box" required>
+    </div>
+
+    <div class="row">
+      <div class="input-box select-box">Select Sport</div>
+      <div class="sports">
+        <label><input type="radio" name="sport" required> Cricket</label>
+        <label><input type="radio" name="sport"> Football</label>
+        <label><input type="radio" name="sport"> Kabaddi</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="arrow">→</span>
+      <button type="submit" class="signup-btn">Sign Up</button>
+    </div>
+
+  </form>
 
 </div>
 
 </body>
 </html>
-
-
-
