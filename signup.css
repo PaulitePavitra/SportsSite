@@ -89,3 +89,33 @@ body {
     font-size: 14px;
     cursor: pointer;
 }
+
+.input-box {
+  width: 360px;
+  padding: 12px;
+  margin: 12px 0;
+  background: transparent;
+  border: 1px solid #aaa;
+  color: white;
+  font-size: 16px;
+}
+
+.input-box::placeholder {
+  color: #777;
+}
+
+.gender-group {
+  margin-top: 15px;
+  color: white;
+  font-size: 16px;
+}
+
+.gender-group label {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.gender-group input[type="radio"] {
+  margin-right: 6px;
+}
+
